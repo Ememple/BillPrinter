@@ -1,5 +1,7 @@
 # BillPrinter
 Contributors: Jan Čihař, Maksym Solonityn, Filip Heger, Kristýna Šachová
+
+## Description
 Simple bill printer.
 
 ## Requirements 
