@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BillPrinter.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BillPrinter_main_jar</output-path>
+    <root id="archive" name="BillPrinter.main.jar">
+      <element id="module-output" name="BillPrinter.main" />
+    </root>
+  </artifact>
+</component>

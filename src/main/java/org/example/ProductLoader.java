@@ -1,25 +1,29 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ProductLoader {
-    public static ArrayList<Product> loadProducts(){
-        ArrayList<Product> products = new ArrayList<>();
+    public static ArrayList<Product> loadProducts() {
+        ArrayList<Product> productList = new ArrayList<>();
 
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("./products.txt"));
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(",");
-                products.add(new Product(Integer.parseInt(parts[0]), parts[1], Double.parseDouble(parts[2])));
+        try (InputStream resourceInputStream = Main.class.getClassLoader().getResourceAsStream("products.txt");
+             BufferedReader reader = new BufferedReader(new InputStreamReader(resourceInputStream))) {
 
+            if (resourceInputStream == null) {
+                System.out.println("Product resource file could not be found.");
+                return productList;
             }
-        }catch (IOException e){
-            System.out.println(e.getMessage());
+
+            String currentLine;
+            while ((currentLine = reader.readLine()) != null) {
+                String[] productFields = currentLine.split(",");
+                productList.add(new Product(Integer.parseInt(productFields[0]), productFields[1], Double.parseDouble(productFields[2])));
+            }
+        } catch (IOException exception) {
+            System.out.println(exception.getMessage());
         }
-        return products;
+
+        return productList;
     }
 }

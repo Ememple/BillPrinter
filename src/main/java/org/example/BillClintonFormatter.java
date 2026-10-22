@@ -17,7 +17,7 @@ public class BillClintonFormatter
 
     private static final DateTimeFormatter DATE_TIME = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
 
-    public String format(List<Item> items)
+    public String format(List<BillItem> items)
     {
         var builder = new StringBuilder();
         var separator = "-".repeat(WIDTH) + System.lineSeparator();
