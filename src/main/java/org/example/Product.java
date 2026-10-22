@@ -40,5 +40,8 @@ public class Product {
         this.price = price;
     }
 
-
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Název: '" + name +", Cena: " + price ;
+    }
 }
