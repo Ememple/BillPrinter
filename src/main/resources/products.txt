@@ -1,0 +1,4 @@
+1,Mléko,20
+2,Rohlík,3.6
+3,Houska,4.2
+4,Chleba,50.

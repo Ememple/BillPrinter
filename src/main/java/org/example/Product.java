@@ -40,18 +40,5 @@ public class Product {
         this.price = price;
     }
 
-    public ArrayList<Product> loadProducts(){
-        ArrayList<Product> products = new ArrayList<>();
 
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("./products.txt"));
-            String line;
-            while ((line = br.readLine()) != null) {
-
-            }
-        }catch (IOException e){
-            System.out.println(e.getMessage());
-        }
-        return products;
-    }
 }

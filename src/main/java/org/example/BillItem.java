@@ -1,11 +1,11 @@
 package org.example;
 
 
-public class Item {
+public class BillItem {
     private Product product;
     private int quantity;
 
-    public Item(Product product, int quantity) {
+    public BillItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
     }
