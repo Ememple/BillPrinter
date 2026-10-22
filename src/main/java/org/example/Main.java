@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -13,5 +15,18 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             IO.println("i = " + i);
         }
+
+
+        var items = new ArrayList<Item>();
+
+        var product = new Product(1, "hovno", 20);
+
+        items.add(new Item(product, 5));
+
+        var formatter = new BillClintonFormatter();
+
+        var res = formatter.format(items);
+
+        IO.println(res);
     }
 }
